@@ -32,7 +32,7 @@ class Song
   def self.genre_count
     gens = self.genres
     rtn = {}
-    
+    puts @@songs.length
     gens.each do |g|
       rtn[g] = 0
       @@songs.each do |s|
