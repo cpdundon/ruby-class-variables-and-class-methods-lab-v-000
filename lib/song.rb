@@ -30,10 +30,10 @@ class Song
   end
   
   def self.genre_count
-    k = self.genres
+    gens = self.genres
     rtn = {}
     
-    k.each do |g|
+    gens.each do |g|
       rtn[g] = 0
       @@songs.each do |s|
         if s.genre == g
