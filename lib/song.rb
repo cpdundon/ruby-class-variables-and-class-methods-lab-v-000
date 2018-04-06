@@ -32,12 +32,28 @@ class Song
   def self.genre_count
     gens = self.genres
     rtn = {}
-    puts @@songs.length
+
     gens.each do |g|
       rtn[g] = 0
       @@genres.each do |g_|
         if g == g_
           rtn[g] += 1
+        end
+      end
+    end
+    
+    rtn
+  end
+  
+  def self.artist_count
+    arts = self.artists
+    rtn = {}
+
+    arts.each do |a|
+      rtn[a] = 0
+      @@artists.each do |a_|
+        if a == a_
+          rtn[a] += 1
         end
       end
     end
