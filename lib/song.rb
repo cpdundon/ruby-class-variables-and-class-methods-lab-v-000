@@ -31,10 +31,16 @@ class Song
   
   def self.genre_count
     k = self.genres
-    len = k.size
-    v = Array[1..len].fill(0)
-    rtn = Hash.new(k, v)
+    rtn = {}
     
+    k.each do |g|
+      rtn[g] = 0
+      @@songs.each do |s|
+        if s.genre == g
+          rtn[g] += 1
+        end
+      end
+    end
     rtn
   end
 end
