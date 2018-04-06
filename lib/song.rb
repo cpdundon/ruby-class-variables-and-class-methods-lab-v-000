@@ -35,8 +35,8 @@ class Song
     puts @@songs.length
     gens.each do |g|
       rtn[g] = 0
-      @@songs.each do |s|
-        if s.genre == g
+      @@genres.each do |g_|
+        if g == g_
           rtn[g] += 1
         end
       end
